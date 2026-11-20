@@ -1,7 +1,41 @@
 # Day 12 — AI SDLC: Đảo Đèn Lồng
 
-> **Cá nhân** (1 người / 1 MSSV) · Áp dụng SDLC cùng AI để xây một **game 3D** qua **4 phase**, từ yêu cầu ban đầu tới bản phát hành.
+> **Cá nhân** (1 người / 1 MSSV) · Áp dụng SDLC cùng AI để xây một **game 3D** qua **4 phase**, từ yêu cầu ban đầu tới bản phát hành.  
 > **Lab board + trợ giảng:** **[Đảo Đèn Lồng Lab](https://claude.ai/artifact/Q1RYyv1dxjUczzCbd2ZnoW)**
+
+---
+
+## ⚡ Hướng dẫn Chạy Nhanh (Quick Start — Tối đa 3 lệnh)
+
+### 1. Cài đặt môi trường
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Chạy game 3D (Có giao diện)
+```bash
+python render/app.py
+```
+*Điều khiển:* `W/A/S/D` di chuyển, `Space` nhảy, `E` thắp đèn / nhặt đom đóm, `Q` hoặc `F` tỏa sáng xua Bóng Mực.
+
+### 3. Chạy kiểm tra tự động & Chế độ Headless (Test Contract)
+```bash
+# Chạy smoke test logic thuần
+python _smoke_test.py
+
+# Chạy headless simulation theo kịch bản Test Contract
+python headless/runner.py --input tests/scenarios/scenario_win.json --steps 50
+python headless/runner.py --input tests/scenarios/scenario_pickup.json --steps 10
+python headless/runner.py --input tests/scenarios/scenario_lose.json --steps 100
+```
+
+---
+
+## 📂 Tài liệu & Bằng chứng Kiểm chứng
+- **Giả định kỹ thuật:** [docs/notes/assumptions.md](docs/notes/assumptions.md)
+- **Nhật ký AI & Token:** [docs/notes/ai-log.md](docs/notes/ai-log.md)
+- **Bằng chứng Phase 1:** [docs/proof/phase-1-proof.md](docs/proof/phase-1-proof.md)
+- **Quy ước cho AI Agent:** [AGENTS.md](AGENTS.md)
 
 ---
 

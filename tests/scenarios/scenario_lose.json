@@ -1,0 +1,11 @@
+{
+  "player": {"id": "may", "pos": {"x": 0, "z": 0}},
+  "fireflies": [],
+  "lanterns": [
+    {"id": "l0", "pos": {"x": 0, "z": 0}}
+  ],
+  "shadows": [
+    {"id": "s0", "pos": {"x": 0, "z": 0}}
+  ],
+  "actions": []
+}
