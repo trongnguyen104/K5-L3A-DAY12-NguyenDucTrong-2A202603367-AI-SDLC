@@ -1,8 +1,21 @@
 """
 core/rules.py
-Hang so game - TAT CA deu la GIA DINH tu dat vi PRD-0 khong cho so lieu cu the.
-Phai ghi lai cac gia dinh nay vao docs/assumptions.md (xem AGENTS.md).
+Hang so game - Phase 2 (Ticket-02, Test Contract v1.1).
 """
+
+import math
+
+# --- Tick ---
+TICK_RATE = 60                  # Chuan: logic chay 60 tick/giay
+DT = 1.0 / TICK_RATE            # Chuan: dt co dinh moi tick
+
+# --- Di chuyen ---
+MOVE_SPEED = 6.0                 # Chuan: 6.0 m/s
+MOVE_ACCEL_TIME_S = 0.1          # Chuan: tang toc/dung trong <= 0.1s
+
+# --- Nhay ---
+JUMP_VELOCITY = 7.0              # Chuan: 7.0 m/s
+GRAVITY = -20.0                  # Chuan: -20 m/s^2
 
 # --- Mau (HP) ---
 PLAYER_MAX_HP = 100          # Gia dinh: mau toi da cua Mây
